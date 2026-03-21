@@ -5,7 +5,9 @@ const userRoutes = express.Router();
 // Importando o Controller de usuários
 import userController from '../controllers/userController.js';
 
-// Endpoint para Cadastar um usuário
+// Endpoint para CADASTRAR um usuário
 userRoutes.post("/user", userController.createUser)
+// Endpoint para LOGAR um usuário
+userRoutes.post("/auth", userController.loginUser)
 
 export default userRoutes;

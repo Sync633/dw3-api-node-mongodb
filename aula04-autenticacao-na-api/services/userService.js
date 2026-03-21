@@ -16,5 +16,16 @@ class userService {
             console.log(error);
         }
     }
+
+    // Método para buscar um usuário
+    async getOne(email) {
+        try {
+            // O método findOne() busca um registro no Banco de Dados (função mongoose)
+            const user = await User.findOne({ email: email });
+            return user;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 export default new userService();
